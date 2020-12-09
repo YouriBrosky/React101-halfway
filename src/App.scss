@@ -1,0 +1,51 @@
+
+* {
+    box-sizing: border-box;
+}
+
+
+.sidebar {
+    padding: 40px 25px;
+
+    ul {
+         margin: 0;
+         padding: 0;
+         border: 1px solid #ccc;
+         border-bottom:  none;
+
+         .active-city {
+              background-color: #8563c2;
+              color: white;
+         }
+
+         li {
+             display: block;
+             margin: 0;
+             padding: 10px;
+             cursor: pointer;
+             border-bottom: 1px solid #ccc;
+
+             &:hover {
+                 background: #8563c2;
+                 color: white;
+             }
+         }
+
+      
+    }
+}
+
+.main {
+    margin: 40px 0;
+    border: 1px solid #ccc;
+    padding: 15px;
+
+    h3 {
+        margin-bottom: 10px;
+    }
+
+    img {
+        margin-bottom: 25px;
+        width: 100%;
+    }
+}
