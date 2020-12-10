@@ -3,6 +3,20 @@
     box-sizing: border-box;
 }
 
+.navbar{
+    a{
+        color: white;
+        margin-left: 15px;
+    }
+}
+
+.add-form{
+    width: 50%;
+    background: #efefef;
+    border: 1px solid #aaa;
+    padding: 40px;
+    margin: 40px;
+}
 
 .sidebar {
     padding: 40px 25px;

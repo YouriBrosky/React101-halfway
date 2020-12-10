@@ -1,4 +1,6 @@
-import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from "reactstrap";
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { Navbar, NavbarBrand, Nav, NavItem } from "reactstrap";
 
 export const NavbarComponent = () => {
     return (
@@ -7,10 +9,10 @@ export const NavbarComponent = () => {
                 <NavbarBrand href="/" className="mr-auto">Bootcamp finder</NavbarBrand>
                 <Nav navbar>
                     <NavItem>
-                        <NavLink href="/">bootcamps</NavLink>
+                        <NavLink to="/">Bootcamps</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="/add-bootcamp">Add bootcamp</NavLink>
+                        <NavLink to="/add-bootcamp">Add bootcamp</NavLink>
                     </NavItem>
                 </Nav>
             </Navbar>

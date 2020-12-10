@@ -1,23 +1,21 @@
 import React, { useEffect } from 'react'
-import cities from "../../assets/data/bootcamps.json";
 import { ICity } from '../../models/ICity';
 
 interface ISidebarComponent {
     selectedCityHandler: React.Dispatch<React.SetStateAction<ICity>>
     selectedCity: ICity
+    allCities: ICity[]
 }
 
 export const SidebarComponent = (props: ISidebarComponent) => {
-
-
     useEffect(() => {
-        props.selectedCityHandler(cities.cities[0]);
+        props.selectedCityHandler(props.allCities[0]);
 
     }, [])
 
-    const cityListItems = cities.cities.map((city: ICity) => {
-        const activeClass = props.selectedCity.id === city.id ? 'active-city' : '';
-        return <li onClick={() => props.selectedCityHandler(city)} className={activeClass} >{city.cityName}</li>;
+    const cityListItems = props.allCities.map((city: ICity) => {
+        const activeClass = props?.selectedCity?.id === city.id ? 'active-city' : '';
+        return <li key={city.id} onClick={() => props.selectedCityHandler(city)} className={activeClass} >{city.cityName}</li>;
     });
 
     return (

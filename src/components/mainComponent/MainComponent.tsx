@@ -11,7 +11,7 @@ export const MainComponent = (props: IMainComponent) => {
 
     let cityDetails = null;
 
-    if (Object.keys(props.selectedCity).length > 0) {
+    if (props.selectedCity !== null && props.selectedCity !== undefined && Object.keys(props.selectedCity).length > 0) {
         cityDetails = (
             <React.Fragment>
                 <h3>{props?.selectedCity?.cityName}</h3>
